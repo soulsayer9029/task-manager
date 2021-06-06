@@ -1,0 +1,33 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title has-text-primary">Login</h1>
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input #email class="input has-background-light" type="email" placeholder="Email">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+             
+            </p>
+          </div>
+          <div class="field">
+            <p class="control has-icons-left">
+              <input #password class="input has-background-light" type="password" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <div class=text-danger *ngIf="showError">
+            <strong>Please Enter appropriate details.</strong>
+          </div>
+          <div class="field is-pulled-right">
+            <p class="control">
+              <button (click)="login(email.value,password.value)" class="button is-primary ">
+                Login
+              </button>
+            </p>
+          </div>
+          <p>Not got an account?<a routerLink="/signup">Sign Up Now!</a></p>
+    </div>
+</div>
